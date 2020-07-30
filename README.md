@@ -4,7 +4,7 @@ We	start	working	with	more	sophisticated	algorithm,	called	DBSCAN,	which	can
 somewhat	handle	problems	of kmeans.	Since	DBSCAN	is	a	little	complicated	we	don’t	
 implement	the	algorithm	in	this	part,	and	we	use	available	libraries.
 
-![Image of Yaktocat](https://github.com/HosseinMohammadii/DM-DBScan/sample-result.png)
+![sample-result](https://github.com/HosseinMohammadii/DM-DBScan/sample-result.png)
 
 
 In	this	assignment,	we've	been	supplied	with	geographical	distribution	of	COVID-19	patients	
