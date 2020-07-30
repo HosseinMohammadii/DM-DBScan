@@ -4,7 +4,7 @@ We	start	working	with	more	sophisticated	algorithm,	called	DBSCAN,	which	can
 somewhat	handle	problems	of kmeans.	Since	DBSCAN	is	a	little	complicated	we	don’t	
 implement	the	algorithm	in	this	part,	and	we	use	available	libraries.
 
-![sample-result](https://github.com/HosseinMohammadii/DM-DBScan/sample-result.png)
+![sample-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/sample-result.png)
 
 
 In	this	assignment,	we've	been	supplied	with	geographical	distribution	of	COVID-19	patients	
@@ -22,3 +22,12 @@ algorithm	works.
 Our	purpose	is	to	use	DBSCAN	to	find	dense	disease	clusters	inside	Iran.	
 
 
+# Actual outputs
+For see real outputs on map run on your sysmtem connected to internet.
+Below images are output for 2 csv files with base parameters in the code.
+
+First:
+![first-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot from 2020-05-04 14-01-51.png)
+
+Scecond: 
+![second-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot from 2020-05-04 14-00-58)
