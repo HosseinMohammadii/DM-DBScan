@@ -1,4 +1,5 @@
-# DM-DBScan
+# DM-DBScan 
+# COVID-19 Distribution
 
 We	start	working	with	more	sophisticated	algorithm,	called	DBSCAN,	which	can	
 somewhat	handle	problems	of kmeans.	Since	DBSCAN	is	a	little	complicated	we	don’t	
@@ -21,6 +22,7 @@ changing	the	value	of	these	to	parameters	changes	the	final	number	of	clusters	a
 algorithm	works.	
 Our	purpose	is	to	use	DBSCAN	to	find	dense	disease	clusters	inside	Iran.	
 
+# For more explanation please read pdf file dbscan section
 
 # Actual outputs
 For see real outputs on map run on your sysmtem connected to internet.
