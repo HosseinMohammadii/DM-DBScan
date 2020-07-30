@@ -22,3 +22,12 @@ algorithm	works.
 Our	purpose	is	to	use	DBSCAN	to	find	dense	disease	clusters	inside	Iran.	
 
 
+# Actual outputs
+For see real outputs on map run on your sysmtem connected to internet.
+Below images are output for 2 csv files with base parameters in the code.
+
+First:
+![first-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot from 2020-05-04 14-01-51.png)
+
+Scecond: 
+![second-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot from 2020-05-04 14-00-58)
