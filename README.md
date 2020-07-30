@@ -27,7 +27,7 @@ For see real outputs on map run on your sysmtem connected to internet.
 Below images are output for 2 csv files with base parameters in the code.
 
 First:
-![first-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot from 2020-05-04 14-01-51.png)
+![first-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot-2020-05-04-14-01-51)
 
 Scecond: 
-![second-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot from 2020-05-04 14-00-58)
+![second-result](https://github.com/HosseinMohammadii/DM-DBScan/blob/master/Screenshot-2020-05-04-14-00-58)
