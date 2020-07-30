@@ -1,0 +1,99 @@
+from sklearn.cluster import DBSCAN
+import numpy as np
+import pandas as pd
+from matplotlib import pyplot as plt
+import folium
+import matplotlib.cm as cm
+import matplotlib as mpl
+from matplotlib.colors import LinearSegmentedColormap
+
+from numpy import arange
+
+N = 500
+data = arange(N +1)
+
+
+
+# =================
+## custom colormap:
+
+# red-green colormap:
+cdict = {'red':   [(0.0, 1.0, 1.0),  # red decreases
+                   (1.0, 0.0, 0.0)],
+
+         'green': [(0.0, 0.0, 0.0),  # green increases
+                   (1.0, 1.0, 1.0)],
+
+         'blue':  [(0.0, 0.0, 0.0),  # no blue at all
+                   (1.0, 0.0, 0.0)] }
+
+red_green_cm = LinearSegmentedColormap('RedGreen', cdict, N)
+
+colors = cm.get_cmap(red_green_cm, N)
+
+
+
+
+# path = "Dataset2.csv"
+path = "covid.csv"
+data = pd.read_csv(path)
+
+print(data.columns.values)
+print(data.size)
+print(len(data))
+# print(data['latitude'].dropna().values[0])
+# print(data[''].dropna().values[0])
+
+dbscan = DBSCAN(eps=0.08, min_samples=6)
+plt.scatter(data['longitude'].dropna().values, data['latitude'].dropna().values, s=0.5)
+# plt.scatter(data['X'].dropna().values, data['Y'].dropna().values, s=30)
+plt.show()
+
+X1 = data.to_numpy()
+clustering1 = dbscan.fit_predict(X1)
+
+
+plt.scatter(X1[:, 1], X1[:, 0], c=clustering1, cmap="plasma", s=0.5)
+plt.show()
+
+path = "covid-sample.csv"
+data = pd.read_csv(path)
+
+print(data.columns.values)
+print(data.size)
+print(len(data))
+# print(data['latitude'].dropna().values[0])
+# print(data[''].dropna().values[0])
+
+dbscan = DBSCAN(eps=0.319, min_samples=4)
+plt.scatter(data['longitude'].dropna().values, data['latitude'].dropna().values, s=0.5)
+# plt.scatter(data['X'].dropna().values, data['Y'].dropna().values, s=30)
+plt.show()
+
+X2 = data.to_numpy()
+clustering2 = dbscan.fit_predict(X2)
+# clustering = dbscan.fit(X)
+# print(clustering)
+
+
+plt.scatter(X2[:, 1], X2[:, 0], c=clustering2, cmap="plasma", s=0.5)
+plt.show()
+
+m1 = folium.Map(location=[X1[0][0], X1[0][1]], zoom_start=5)
+counter = 0
+for coordinate in X1:
+    loc = (coordinate[0], coordinate[1])
+    folium.CircleMarker(location=loc, radius=0.05, icon_color=colors(clustering1[counter]), fill=True).add_to(m1)
+    counter += 1
+
+# display(m1)
+
+m2 = folium.Map(location=[X2[0][0], X2[0][1]], zoom_start=5)
+
+counter = 0
+for coordinate in X2:
+    loc = (coordinate[0], coordinate[1])
+    folium.CircleMarker(location=loc, radius=1, icon_color=colors(clustering2[counter]), fill=True).add_to(m2)
+    counter += 1
+
+# display(m2)
